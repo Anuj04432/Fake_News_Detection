@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
+import pickle
 
 # Downloading stopwords
 nltk.download('stopwords')
@@ -77,21 +78,4 @@ print("Accuracy:",accuracy)
 confusion_matrix(y_test,y_pred)
 
 print(classification_report(y_test,y_pred))
-
-
-# Input values and Prediction
-news = "Narendra modi is the chief minister of China"
-cleaned_news = text_cleaning(news)
-
-news_vector = tfidf.transform([cleaned_news])
-
-prediction = model.predict(news_vector)
-
-if prediction[0] == 0:
-    print("Fake News")
-else:
-    print("Real News")
-
-
-
 
