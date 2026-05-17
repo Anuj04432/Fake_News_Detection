@@ -38,16 +38,22 @@ st.title("Fake News Detection")
 st.write("Enter a news headline or article")
 
 news = st.text_area("News Text")
+st.sidebar.title("About")
+st.sidebar.write("Fakenews detetion app")
 
 if st.button("Predict"):
-
-    cleaned_news = text_cleaning(news)
-
-    news_vector = vectorizer.transform([cleaned_news])
-
-    prediction = model.predict(news_vector)
-
-    if prediction[0] == 0:
-        st.error("Fake News")
+    if news.strip() == "":
+        st.error("Write a news article or headline")
     else:
-        st.success("Real News")
+        cleaned_news = text_cleaning(news)
+        # st.write("cleaned news",cleaned_news)
+
+        news_vector = vectorizer.transform([cleaned_news])
+
+        prediction = model.predict(news_vector)
+        probability = model.predict_proba(news_vector)
+        
+        if prediction[0] == 0:
+            st.error("Fake News")
+        else:
+            st.success("Real News")
