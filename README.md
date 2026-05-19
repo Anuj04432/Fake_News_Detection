@@ -38,6 +38,47 @@ Dataset used:
 - Streamlit
 
 ---
+# Clone Repository
+
+```bash
+git clone https://github.com/your-username/fake-news-detection.git
+```
+
+Move into project folder:
+
+```bash
+cd fake-news-detection
+```
+
+---
+
+# Create Virtual Environment
+
+```bash
+python -m venv .env
+```
+
+Activate virtual environment:
+
+## Windows
+
+```bash
+.env\Scripts\activate
+```
+
+## Linux / Mac
+
+```bash
+source .env/bin/activate
+```
+
+---
+
+# Install Dependencies
+
+```bash
+pip install pandas numpy scikit-learn nltk streamlit
+```
 
 # Dataset
 
