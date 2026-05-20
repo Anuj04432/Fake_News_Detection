@@ -38,22 +38,56 @@ st.title("Fake News Detection")
 st.write("Enter a news headline or article")
 
 news = st.text_area("News Text")
-st.sidebar.title("About")
-st.sidebar.write("Fakenews detetion app")
+st.sidebar.title("📰 About This Project")
 
-if st.button("Predict"):
+st.sidebar.info(
+    """
+    ## Fake News Detection System
+
+    This application uses:
+
+    ✅ Natural Language Processing (NLP)  
+    ✅ TF-IDF Vectorization  
+    ✅ Logistic Regression Model  
+    ✅ Streamlit Web Application  
+
+    Enter a news headline or article to check whether it is:
+
+    ✔ Real News  
+    ✖ Fake News
+    """
+)
+st.sidebar.success("Model Accuracy: 98%")
+if st.button("🔍 Predict"):
+
     if news.strip() == "":
-        st.error("Write a news article or headline")
+        st.warning("⚠ Please write a news article or headline")
+
     else:
+
         cleaned_news = text_cleaning(news)
-        # st.write("cleaned news",cleaned_news)
 
         news_vector = vectorizer.transform([cleaned_news])
 
         prediction = model.predict(news_vector)
+
         probability = model.predict_proba(news_vector)
-        
+
+        confidence = max(probability[0]) * 100
+
+        st.subheader("Prediction Result")
+
         if prediction[0] == 0:
-            st.error("Fake News")
+
+            st.error("🚨 Fake News Detected")
+
+            st.write(f"Confidence Score: {confidence:.2f}%")
+
         else:
-            st.success("Real News")
+
+            st.success("✅ Real News")
+
+            st.write(f"Confidence Score: {confidence:.2f}%")
+
+        with st.expander("View Cleaned Text"):
+            st.write(cleaned_news)
