@@ -57,7 +57,21 @@ st.sidebar.info(
     ✖ Fake News
     """
 )
-st.sidebar.success("Model Accuracy: 98%")
+with st.sidebar:
+    col1,col2,col3 = st.columns(3)
+
+    with col1:
+        st.link_button("</>Github","https://github.com/Anuj04432")
+
+    with col2:
+        st.link_button("ℹ️Linkedin","https://www.linkedin.com/in/anuj-wagmore-874a883a7/")
+    with col3:
+        st.link_button("🌐Portfolio","https://anujwagmore.netlify.app/")
+    # with col4:
+    #     st.link_button("</>Github","https://github.com/Anuj04432")
+
+
+
 if st.button("🔍 Predict"):
 
     if news.strip() == "":
@@ -89,5 +103,5 @@ if st.button("🔍 Predict"):
 
             st.write(f"Confidence Score: {confidence:.2f}%")
 
-        with st.expander("View Cleaned Text"):
-            st.write(cleaned_news)
+        # with st.expander("View Cleaned Text"):
+        #     st.write(cleaned_news)
