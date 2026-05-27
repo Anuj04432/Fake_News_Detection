@@ -37,11 +37,23 @@ st.title("Fake News Detection")
 
 st.write("Enter a news headline or article")
 
+
+st.markdown("""
+    <style>
+    .stApp {
+        background-color:#90ee60;
+        color:black;
+    }
+    </style>
+
+""", unsafe_allow_html=True)
+
+
 st.markdown("""
 <style>
     textarea{ 
-            background-color:white !important;
-            color:white !important;
+            background-color:0white !important;
+            color:green !important;
             font-family: 'Segoe UI', sans-serif !important;
             border:2px solid !important;
             border-radius:12px !important;
@@ -60,10 +72,14 @@ st.markdown("""
     color: #6c7086 !important;
     font-style: italic;
 }
-            </style>
+    .stTextArea label {
+    color: Red !important;
+}
+       </style>
 """,unsafe_allow_html=True)
 
-news = st.text_area("Headline||News article", placeholder="Type something beautiful...")
+news = st.text_area(label="Headline||News article", placeholder="Type something beautiful...")
+
 st.sidebar.title("📰 About This Project")
 
 st.sidebar.info(
