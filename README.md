@@ -1,62 +1,35 @@
 # Fake News Detection using NLP and Machine Learning
 
 ## Project Overview
-This project is a **Fake News Detection System** built using **Natural Language Processing (NLP)** and **Machine Learning**.  
-The model predicts whether a news headline or article is **Fake News** or **Real News**.
 
-The system uses:
+This project is a Fake News Detection System built using Natural Language Processing (NLP) and Machine Learning techniques.  
+The model predicts whether a news article or headline is Fake News or Real News.
+
+The project uses:
 - TF-IDF Vectorization
 - Logistic Regression
 - Streamlit Web Application
 
----
-
-## Dataset
-The project uses the **Fake and Real News Dataset** from Kaggle.
-
-### Dataset Files
-- `Fake.csv` – Contains fake news
-- `True.csv` – Contains real news
-
-### Dataset Link
-https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
+Dataset used:
+- Fake and Real News Dataset from Kaggle
 
 ---
 
-## Features / Functionality
+# Features
 
-### NLP Preprocessing
-- Lowercase conversion
-- Removal of special characters
-- Tokenization
+- Text preprocessing using NLP
 - Stopword removal
-- Stemming using PorterStemmer
-
-### Machine Learning
+- Stemming using Porter Stemmer
 - TF-IDF vectorization
 - Logistic Regression model
 - Fake/Real news prediction
-- Confidence score prediction
-
-### Streamlit Web Application
+- Streamlit web application
 - User-friendly interface
-- Sidebar project description
-- GitHub, LinkedIn, and Portfolio links
-- News headline/article input area
 
 ---
 
-## Example of Text Preprocessing
+# Technologies Used
 
-### Before preprocessing
-Donald Trump Sends Out Embarrassing New Year Eve Message
-
-### After preprocessing
-donald trump send embarrass new year eve messag
-
----
-
-## Technologies Used
 - Python
 - Pandas
 - NumPy
@@ -65,25 +38,89 @@ donald trump send embarrass new year eve messag
 - Streamlit
 
 ---
+# Clone Repository
 
-## Project Structure
+```bash
+git clone https://github.com/your-username/fake-news-detection.git
+```
 
-FAKE_NEWS_DETECTION/
-│
-├── datasets/
-│   ├── Fake.csv
-│   └── True.csv
-│
-├── text_preprocessing.ipynb
-├── app.py
-├── model.pkl
-├── vectorizer.pkl
-└── README.md
+Move into project folder:
+
+```bash
+cd fake-news-detection
+```
 
 ---
 
-## Machine Learning Workflow
+# Create Virtual Environment
 
+```bash
+python -m venv .env
+```
+
+Activate virtual environment:
+
+## Windows
+
+```bash
+.env\Scripts\activate
+```
+
+## Linux / Mac
+
+```bash
+source .env/bin/activate
+```
+
+---
+
+# Install Dependencies
+
+```bash
+pip install pandas numpy scikit-learn nltk streamlit
+```
+
+# Dataset
+
+Dataset Link:
+
+https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
+
+Dataset contains:
+- Fake.csv
+- True.csv
+
+---
+
+# NLP Preprocessing Steps
+
+The following preprocessing techniques were applied:
+
+1. Lowercase conversion
+2. Removal of special characters
+3. Tokenization
+4. Stopword removal
+5. Stemming using PorterStemmer
+
+Example:
+
+Before preprocessing:
+
+```text
+Donald Trump Sends Out Embarrassing New Year Eve Message
+```
+
+After preprocessing:
+
+```text
+donald trump send embarrass new year eve messag
+```
+
+---
+
+# Machine Learning Workflow
+
+```text
 Dataset
    ↓
 Text Preprocessing
@@ -95,74 +132,85 @@ Train-Test Split
 Logistic Regression
    ↓
 Prediction
+```
 
 ---
 
-## Model Used
+# Model Used
+
 - Logistic Regression
 
 ---
 
-## How to Run the Project
+# Project Structure
 
-### 1. Clone Repository
-```bash
-git clone https://github.com/your-username/fake-news-detection.git
-cd fake-news-detection
+```text
+FAKE_NEWS_DETECTION/
+│
+├── datasets/
+│
+├── text_preprocessing.ipynb
+├── app.py
+│
+├── model.pkl
+├── vectorizer.pkl
+│
+└── README.md
 ```
 
-### 2. Create Virtual Environment
-```bash
-python -m venv .env
-```
+---
 
-### 3. Activate Virtual Environment
+# Streamlit App
 
-#### Windows
-```bash
-.env\Scripts\activate
-```
+The Streamlit web application allows users to:
+- Enter a news headline or article
+- Predict whether the news is fake or real
 
-#### Linux / Mac
-```bash
-source .env/bin/activate
-```
+---
 
-### 4. Install Dependencies
+# How to Run the Project
+
+## 1. Install Dependencies
+
 ```bash
 pip install pandas numpy scikit-learn nltk streamlit
 ```
 
-### 5. Run Notebook
+---
+
+## 2. Run Notebook
+
 Run:
-```bash
-text_preprocessing.ipynb
-```
+- `text_preprocessing.ipynb`
 
 This will:
 - preprocess text
 - train model
 - generate:
-  - model.pkl
-  - vectorizer.pkl
+  - `model.pkl`
+  - `vectorizer.pkl`
 
-### 6. Run Streamlit App
+---
+
+## 3. Run Streamlit App
+
 ```bash
 streamlit run app.py
 ```
 
 ---
 
-## Streamlit App Features
-- Enter a news headline or article
-- Predict whether the news is fake or real
-- Display prediction confidence score
+# Future Improvements
+
+- Add prediction confidence score
+- Improve UI design
+- Use PassiveAggressiveClassifier
+- Add BERT model
+- Deploy application online
+- Add live news API integration
 
 ---
 
-## Future Improvements
-- Add PassiveAggressiveClassifier
-- Add BERT model
-- Improve UI design
-- Deploy application online
-- Add live news API integration
+# Author
+
+Anuj Wagmore
