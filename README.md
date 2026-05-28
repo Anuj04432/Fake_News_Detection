@@ -36,21 +36,19 @@ Add Your Hosted Link Here
 
 ## Home Page
 
-> Add screenshot here after deployment
-
-```text
-screenshots/homepage.png
-```
+![Home Page](C:\Users\Anuj Kumar\Desktop\Fake_News_Detection\screenshots\home.png)
 
 ---
 
-## Prediction Result
+## Prediction Result - Fake News
 
-> Add screenshot here after deployment
+![Fake News Prediction](C:\Users\Anuj Kumar\Desktop\Fake_News_Detection\screenshots\fake.png)
 
-```text
-screenshots/prediction.png
-```
+---
+
+## Prediction Result - Real News
+
+![Real News Prediction](C:\Users\Anuj Kumar\Desktop\Fake_News_Detection\screenshots\real.png)
 
 ---
 
