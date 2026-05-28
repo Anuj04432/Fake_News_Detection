@@ -213,4 +213,4 @@ streamlit run app.py
 
 # Author
 
-Anuj Wagmore
+Anuj Wagmore & Tapaswini Shaw
