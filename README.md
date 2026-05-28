@@ -36,19 +36,19 @@ Add Your Hosted Link Here
 
 ## Home Page
 
-![Home Page](C:\Users\Anuj Kumar\Desktop\Fake_News_Detection\screenshots\home.png)
+![Home Page](screenshots\home.png)
 
 ---
 
 ## Prediction Result - Fake News
 
-![Fake News Prediction](C:\Users\Anuj Kumar\Desktop\Fake_News_Detection\screenshots\fake.png)
+![Fake News Prediction](screenshots\fake.png)
 
 ---
 
 ## Prediction Result - Real News
 
-![Real News Prediction](C:\Users\Anuj Kumar\Desktop\Fake_News_Detection\screenshots\real.png)
+![Real News Prediction](screenshots\real.png)
 
 ---
 
