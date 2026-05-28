@@ -1,9 +1,12 @@
 # Fake News Detection using NLP and Machine Learning
 
-## Project Overview
+---
 
-This project is a Fake News Detection System built using Natural Language Processing (NLP) and Machine Learning techniques.  
-The model predicts whether a news article or headline is Fake News or Real News.
+# Project Overview
+
+This project is a **Fake News Detection System** built using **Natural Language Processing (NLP)** and **Machine Learning** techniques.
+
+The model predicts whether a news article or headline is **Fake News** or **Real News**.
 
 The project uses:
 - TF-IDF Vectorization
@@ -12,6 +15,42 @@ The project uses:
 
 Dataset used:
 - Fake and Real News Dataset from Kaggle
+Dataset Link:
+
+https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
+
+
+---
+
+# Live Demo
+
+Hosted Application Link:
+
+```text
+Add Your Hosted Link Here
+```
+
+---
+
+# Screenshots
+
+## Home Page
+
+> Add screenshot here after deployment
+
+```text
+screenshots/homepage.png
+```
+
+---
+
+## Prediction Result
+
+> Add screenshot here after deployment
+
+```text
+screenshots/prediction.png
+```
 
 ---
 
@@ -25,6 +64,7 @@ Dataset used:
 - Fake/Real news prediction
 - Streamlit web application
 - User-friendly interface
+- Real-time prediction system
 
 ---
 
@@ -36,8 +76,10 @@ Dataset used:
 - Scikit-learn
 - NLTK
 - Streamlit
+- Pickle
 
 ---
+
 # Clone Repository
 
 ```bash
@@ -79,6 +121,8 @@ source .env/bin/activate
 ```bash
 pip install pandas numpy scikit-learn nltk streamlit
 ```
+
+---
 
 # Dataset
 
@@ -138,7 +182,15 @@ Prediction
 
 # Model Used
 
-- Logistic Regression
+## Logistic Regression
+
+Logistic Regression is used as the primary machine learning model for binary text classification.
+
+Advantages:
+- Fast training
+- High accuracy for text classification
+- Efficient with TF-IDF features
+- Lightweight and easy to deploy
 
 ---
 
@@ -148,12 +200,18 @@ Prediction
 FAKE_NEWS_DETECTION/
 │
 ├── datasets/
+│   ├── Fake.csv
+│   └── True.csv
 │
 ├── text_preprocessing.ipynb
 ├── app.py
 │
 ├── model.pkl
 ├── vectorizer.pkl
+│
+├── requirements.txt
+│
+├── LICENSE
 │
 └── README.md
 ```
@@ -165,6 +223,7 @@ FAKE_NEWS_DETECTION/
 The Streamlit web application allows users to:
 - Enter a news headline or article
 - Predict whether the news is fake or real
+- View prediction instantly
 
 ---
 
@@ -181,14 +240,17 @@ pip install pandas numpy scikit-learn nltk streamlit
 ## 2. Run Notebook
 
 Run:
-- `text_preprocessing.ipynb`
+
+```text
+text_preprocessing.ipynb
+```
 
 This will:
 - preprocess text
 - train model
 - generate:
-  - `model.pkl`
-  - `vectorizer.pkl`
+  - model.pkl
+  - vectorizer.pkl
 
 ---
 
@@ -196,6 +258,40 @@ This will:
 
 ```bash
 streamlit run app.py
+```
+
+---
+
+# Deployment
+- Streamlit Cloud
+
+---
+
+# requirements.txt
+
+```txt
+pandas
+numpy
+scikit-learn
+nltk
+streamlit
+```
+
+---
+
+# LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2026 Anuj Wagmore & Tapaswini Shaw
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 ```
 
 ---
@@ -208,9 +304,26 @@ streamlit run app.py
 - Add BERT model
 - Deploy application online
 - Add live news API integration
+- Multi-language fake news detection
+- Dark mode UI
+
+---
+# Authors
+
+## Anuj Wagmore
+## Tapaswini Shaw
 
 ---
 
-# Author
+# Acknowledgements
 
-Anuj Wagmore & Tapaswini Shaw
+- Kaggle Dataset Contributors
+- Scikit-learn Documentation
+- NLTK Documentation
+- Streamlit Documentation
+
+---
+
+# Support
+
+If you like this project, give it a ⭐ on GitHub.
