@@ -4,6 +4,13 @@ import re
 
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
+import nltk
+
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
+
 
 # Load saved model and vectorizer
 model = pickle.load(open("model.pkl", "rb"))
