@@ -27,7 +27,7 @@ https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
 Hosted Application Link:
 
 ```text
-Add Your Hosted Link Here
+https://fakenewsdetection-anuj.streamlit.app/
 ```
 
 ---
